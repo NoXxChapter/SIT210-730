@@ -1,0 +1,45 @@
+Code:
+
+Setup -> With each line tell which PIN to send/receive signal
+Loop: 
+	If (Switch == ON) -> execute:
+		porchLED -> ON		hallLED -> ON
+		wait 30sec
+		porchLED -> OFF
+		wait 30sec
+		hallLED -> OFF
+Last line: to help easier to observe the actuator.
+
+	===============================================================================================
+
+Modular discussion:
+
+By utilize the modular programming, it make the writing and testing progress advanced a lot faster and cleaner. In testing phase, it easy to manipulate the delay time, unlike usual when i have to change the time line by line manually. This time i only need to change in the module, it faster, really.  Also in the future, for example i want to install more LED to light up. I do not need to write each line manual again. It really speed up and make the code more professional.
+
+	===============================================================================================
+	
+Each part:
+
+	+ The NANO IOT33 act as the central processor (control processor) it contains and execute command (code) embedded in the memory to do the task.
+	+ LED: act as light source.
+	+ Pipes: connect PIN, transit electricity.
+	+ Switch: act as a toggle decide when to allow the transit.
+	+ Resistor: limit the voltage, protect LED from being damaged.
+
+	===============================================================================================
+
+How it work ?
+
+First with switch, i connect the middle leg with PIN12 to send the switch signal, with both left and right legs are connected to 3.3V and Ground. After received the signal from switch, PIN11 and PIN10 then send HIGH signal to make each LED light up. With porch LED(LED11) stays for 30 secs and hall LED(LED10) stays for 60sec. Then, turn off.
+
+	===============================================================================================
+
+Constraints from DESIGN POV:
+
+I think the biggest downside it would be intrigued if Linda want to turn on the light a 2nd time. For example, after 30s the porch light would turn off. If see want to turn it ON, see have to wait another 30s so that the hall light turn OFF, then she can turn it ON back. I think this would be really nuisance to Linda(owner).
+
+	===============================================================================================
+
+Add-on modular ?
+
+If i have to pick maybe it would be motion sensor first. I like the idea, you waves your hand to turn ON/OFF the light. Instead of fumble to find the button, it would be faster. Next, it would be an Alarm module, in case the house have intruders i would sound an alert to warning. Really helpful consider how reckless intruders could be on every news now. Lastly, is dimming mode. I really hate to open my eyes at night to walk to refrigerator with too bright light. So it would awesome, i could actively controlling the strength of light instead of just maximum all time. And i think all these ideas would be one of first things i would like to add into the programming in this trimester.
