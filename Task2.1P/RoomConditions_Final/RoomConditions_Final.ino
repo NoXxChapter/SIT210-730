@@ -6,8 +6,8 @@
 #include "secrets.h"
 #include "ThingSpeak.h" // always include thingspeak header file after other header files and custom macros
 
-char ssid[] = "OPTUS_DD42F5M";   // your network SSID (name) 
-char pass[] = "mince36566mt";   // your network password
+char ssid[] = "private";   // your network SSID (name) 
+char pass[] = "private";   // your network password
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 WiFiClient  client;
 
